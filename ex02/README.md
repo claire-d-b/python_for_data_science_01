@@ -18,3 +18,6 @@ python tester.py
 
 deactivate
 
+rm -rf __pycache__
+rm -rf venv
+
