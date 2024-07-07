@@ -3,9 +3,6 @@ python -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
 
-echo alias python='./venv/bin/python' >> venv/bin/activate
-
-deactivate
 source venv/bin/activate
 
 pip uninstall Pillow
