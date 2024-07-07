@@ -1,5 +1,4 @@
 from PIL import Image
-import io
 
 def ft_load(path: str) -> bytearray:
     try:
@@ -30,7 +29,7 @@ def ft_load(path: str) -> bytearray:
     # Example: Simple integer division
     # result = 7 // 2 Output: 3
 
-    output_image_path = "zoom.jpg"
+    output_image_path = "zoom.jpeg"
     
     # Specify the zoom factor (adjust as needed)
     # Zoom factor > 1 zooms in, < 1 zooms out
@@ -41,7 +40,7 @@ def ft_load(path: str) -> bytearray:
     # Calculate the cropping box
     center_x, center_y = width // 2, height // 2
 
-    if width > height:
+    if width < height:
         right, bottom = width / factor, width / factor
     else:
         right, bottom = height / factor, height / factor

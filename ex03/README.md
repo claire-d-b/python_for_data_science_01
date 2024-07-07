@@ -11,7 +11,7 @@ pip install Pillow
 echo alias python='./venv/bin/python' >> venv/bin/activate
 source venv/bin/activate
 
-python tester.py
+python zoom.py
 
 deactivate
 
