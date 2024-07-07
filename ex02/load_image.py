@@ -19,7 +19,7 @@ def ft_load(path: str) -> bytearray:
         i = 0
         for item in items:
             i += 1
-        print(string, height, width, i)
+        print(string, (height, width, i))
     except AssertionError as e:
         print(f"AssertionError: {e}")
     return barray
