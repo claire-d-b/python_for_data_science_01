@@ -24,11 +24,6 @@ def ft_load(path: str) -> bytearray:
     except AssertionError as e:
         print(f"AssertionError: {e}")
 
-    # In Python, the // operator is used for integer (floor) division.
-    # This means it divides the number on its left by the number on its right and then rounds down to the nearest integer.
-    # Example: Simple integer division
-    # result = 7 // 2 Output: 3
-
     output_image_path = "zoom.jpeg"
     
     # Specify the zoom factor (adjust as needed)
@@ -37,18 +32,15 @@ def ft_load(path: str) -> bytearray:
 
     nwidth, nheight = 400, 400
 
-    # Calculate the cropping box
-    center_x, center_y = width // 2, height // 2
-
     if width < height:
         right, bottom = width / factor, width / factor
     else:
         right, bottom = height / factor, height / factor
     
-    # Crop the image to the calculated box
+    # Crop the image to the desired box
     cropped_image = image.crop((0, 0, right, bottom))
     
-    # Resize the cropped image back to the original dimensions
+    # Resize the cropped image back to the desired dimensions
     zoomed_image = cropped_image.resize((nwidth, nheight), Image.LANCZOS)
     
     # Save the zoomed image
@@ -70,6 +62,8 @@ def ft_load(path: str) -> bytearray:
     except AssertionError as e:
         print(f"AssertionError: {e}")
     string = "New shape after slicing: "
+
+    assert len(nbarray), "Bytearray is not in correct format"
 
     print(string, (nheight, nwidth, 1), " or ", (nheight, nwidth))
 

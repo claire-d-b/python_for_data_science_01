@@ -21,8 +21,6 @@ def ft_load(path: str) -> bytearray:
         # Convert the flat list of RGB values to bytes
         rgb_bytes = bytes(nbarray)
 
-        print("BARRAY : ", nbarray)
-
         # Create an RGB image from bytes
         img = Image.frombytes('RGB', (height, width), rgb_bytes)
 

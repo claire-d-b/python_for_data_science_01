@@ -34,14 +34,7 @@ def ft_red(path: str) -> bytearray:
     barray = []
     try:
         assert Image.open(input_image_path)
-        # Open the image
         image = Image.open(input_image_path)
-        
-        # # Invert the image
-        # inverted_image = ImageOps.invert(image)
-        
-        # # Save the inverted image
-        # inverted_image.save(output_image_path)
 
         width, height = image.size
 
@@ -53,8 +46,6 @@ def ft_red(path: str) -> bytearray:
 
         # Convert the flat list of RGB values to bytes
         rgb_bytes = bytes(barray)
-
-        print("BARRAY : ", barray)
 
         # Create an RGB image from bytes
         img = Image.frombytes('RGB', (width, height), rgb_bytes)
@@ -72,14 +63,7 @@ def ft_blue(path: str) -> bytearray:
     barray = []
     try:
         assert Image.open(input_image_path)
-        # Open the image
         image = Image.open(input_image_path)
-        
-        # # Invert the image
-        # inverted_image = ImageOps.invert(image)
-        
-        # # Save the inverted image
-        # inverted_image.save(output_image_path)
 
         width, height = image.size
 
@@ -91,8 +75,6 @@ def ft_blue(path: str) -> bytearray:
 
         # Convert the flat list of RGB values to bytes
         rgb_bytes = bytes(barray)
-
-        print("BARRAY : ", barray)
 
         # Create an RGB image from bytes
         img = Image.frombytes('RGB', (width, height), rgb_bytes)
@@ -110,14 +92,8 @@ def ft_green(path: str) -> bytearray:
     barray = []
     try:
         assert Image.open(input_image_path)
-        # Open the image
         image = Image.open(input_image_path)
-        
-        # # Invert the image
-        # inverted_image = ImageOps.invert(image)
-        
-        # # Save the inverted image
-        # inverted_image.save(output_image_path)
+    
 
         width, height = image.size
 
@@ -129,8 +105,6 @@ def ft_green(path: str) -> bytearray:
 
         # Convert the flat list of RGB values to bytes
         rgb_bytes = bytes(barray)
-
-        print("BARRAY : ", barray)
 
         # Create an RGB image from bytes
         img = Image.frombytes('RGB', (width, height), rgb_bytes)
@@ -148,14 +122,7 @@ def ft_gray(path: str) -> bytearray:
     barray = []
     try:
         assert Image.open(input_image_path)
-        # Open the image
         image = Image.open(input_image_path)
-        
-        # # Invert the image
-        # inverted_image = ImageOps.invert(image)
-        
-        # # Save the inverted image
-        # inverted_image.save(output_image_path)
 
         width, height = image.size
 
@@ -171,8 +138,6 @@ def ft_gray(path: str) -> bytearray:
 
         # Convert the flat list of RGB values to bytes
         rgb_bytes = bytes(barray)
-
-        print("BARRAY : ", barray)
 
         # Create an RGB image from bytes
         img = Image.frombytes('RGB', (width, height), rgb_bytes)
