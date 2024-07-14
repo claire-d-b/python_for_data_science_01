@@ -1,5 +1,6 @@
 from PIL import Image
 
+
 def ft_load(path: str) -> bytearray:
     try:
         assert Image.open(path), "Error: failed to open file"
@@ -13,9 +14,9 @@ def ft_load(path: str) -> bytearray:
                 r, g, b = image.getpixel((x, y))
                 barray.append([r, g, b])
         barray.append([r, g, b])
-        
+
         string = "The shape of image is: "
-        items = image.getpixel((0,0))
+        items = image.getpixel((0, 0))
         i = 0
         for item in items:
             i += 1
@@ -23,4 +24,3 @@ def ft_load(path: str) -> bytearray:
     except AssertionError as e:
         print(f"AssertionError: {e}")
     return barray
-

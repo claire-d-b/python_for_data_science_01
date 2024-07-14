@@ -1,5 +1,6 @@
 from PIL import Image, ImageOps
 
+
 def ft_invert(path: str) -> bytearray:
     input_image_path = path
     output_image_path = "pimp_image_inv.jpeg"
@@ -8,10 +9,10 @@ def ft_invert(path: str) -> bytearray:
         assert Image.open(input_image_path)
         # Open the image
         image = Image.open(input_image_path)
-        
+
         # Invert the image
         inverted_image = ImageOps.invert(image)
-        
+
         # Save the inverted image
         inverted_image.save(output_image_path)
 
@@ -27,6 +28,7 @@ def ft_invert(path: str) -> bytearray:
         print(f"AssertionError: {e}")
 
     return barray
+
 
 def ft_red(path: str) -> bytearray:
     input_image_path = path
@@ -57,6 +59,7 @@ def ft_red(path: str) -> bytearray:
 
     return barray
 
+
 def ft_blue(path: str) -> bytearray:
     input_image_path = path
     output_image_path = "pimp_image_blue.jpeg"
@@ -86,6 +89,7 @@ def ft_blue(path: str) -> bytearray:
 
     return barray
 
+
 def ft_green(path: str) -> bytearray:
     input_image_path = path
     output_image_path = "pimp_image_green.jpeg"
@@ -93,7 +97,6 @@ def ft_green(path: str) -> bytearray:
     try:
         assert Image.open(input_image_path)
         image = Image.open(input_image_path)
-    
 
         width, height = image.size
 
@@ -116,6 +119,7 @@ def ft_green(path: str) -> bytearray:
 
     return barray
 
+
 def ft_gray(path: str) -> bytearray:
     input_image_path = path
     output_image_path = "pimp_image_gray.jpeg"
@@ -126,9 +130,11 @@ def ft_gray(path: str) -> bytearray:
 
         width, height = image.size
 
-        # Grayscale colors are those where the red, green, and blue components are all equal.
-        # The RGB values that make up shades of gray range from (0, 0, 0) for black to (255, 255, 255) for white,
-        # with intermediate values representing different shades of gray.
+        # Grayscale colors are those where the red, green, and blue
+        # components are all equal.
+        # The RGB values that make up shades of gray range from (0, 0, 0)
+        # for black to (255, 255, 255) for white, with intermediate values
+        # representing different shades of gray.
 
         for x in range(height):
             for y in range(width):
@@ -148,5 +154,3 @@ def ft_gray(path: str) -> bytearray:
         print(f"AssertionError: {e}")
 
     return barray
-
-    

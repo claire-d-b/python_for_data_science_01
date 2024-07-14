@@ -1,5 +1,5 @@
 from PIL import Image
-import numpy as np
+
 
 def ft_load(path: str) -> bytearray:
     input_image_path = "animal.jpeg"
@@ -25,9 +25,9 @@ def ft_load(path: str) -> bytearray:
         img = Image.frombytes('RGB', (height, width), rgb_bytes)
 
         img.save(output_image_path)
-        
+
         string = "The shape of image is: "
-        items = image.getpixel((0,0))
+        items = image.getpixel((0, 0))
         i = 0
         for item in items:
             i += 1

@@ -1,5 +1,6 @@
 
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+def give_bmi(height: list[int | float], weight:
+             list[int | float]) -> list[int | float]:
     i = 0
     j = len(height)
     ret = []
@@ -12,13 +13,14 @@ def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int |
         print(f"AssertionError: {e}")
     return ret
 
+
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     ret = []
     try:
         for b in bmi:
             assert b <= limit
             ret.append(True)
-    except:
+    except AssertionError as e:
+        print(f"AssertionError: {e}")
         ret.append(False)
     return ret
-
