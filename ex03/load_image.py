@@ -27,8 +27,8 @@ def ft_load(path: str) -> bytearray:
 
     output_image_path = "zoom.jpeg"
 
-    # Specify the zoom factor (adjust as needed)
-    # Zoom factor > 1 zooms in, < 1 zooms out
+    """ Specify the zoom factor (adjust as needed)
+    Zoom factor > 1 zooms in, < 1 zooms out """
     factor = 1.5
 
     nwidth, nheight = 400, 400
@@ -38,13 +38,13 @@ def ft_load(path: str) -> bytearray:
     else:
         right, bottom = height / factor, height / factor
 
-    # Crop the image to the desired box
+    """ Crop the image to the desired box """
     cropped_image = image.crop((0, 0, right, bottom))
 
-    # Resize the cropped image back to the desired dimensions
+    """ Resize the cropped image back to the desired dimensions """
     zoomed_image = cropped_image.resize((nwidth, nheight), Image.LANCZOS)
 
-    # Save the zoomed image
+    """ Save the zoomed image """
     zoomed_image.save(output_image_path)
 
     npath = output_image_path
