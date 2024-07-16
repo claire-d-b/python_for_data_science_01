@@ -23,4 +23,4 @@ def ft_load(path: str) -> bytearray:
         print(string, (height, width, i))
     except AssertionError as e:
         print(f"AssertionError: {e}")
-    return barray
+    return [barray]

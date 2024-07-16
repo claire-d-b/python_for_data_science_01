@@ -2,6 +2,7 @@ from PIL import Image, ImageOps
 
 
 def ft_invert(path: str) -> bytearray:
+    """Inverts the color of the image received."""
     input_image_path = path
     output_image_path = "pimp_image_inv.jpeg"
     barray = []
@@ -17,6 +18,13 @@ def ft_invert(path: str) -> bytearray:
         inverted_image.save(output_image_path)
 
         width, height = image.size
+
+        string = "The shape of image is: "
+        items = image.getpixel((0, 0))
+        i = 0
+        for item in items:
+            i += 1
+        print(string, (height, width, i))
 
         for x in range(width):
             for y in range(height):
@@ -39,6 +47,13 @@ def ft_red(path: str) -> bytearray:
         image = Image.open(input_image_path)
 
         width, height = image.size
+
+        string = "The shape of image is: "
+        items = image.getpixel((0, 0))
+        i = 0
+        for item in items:
+            i += 1
+        print(string, (height, width, i))
 
         for x in range(height):
             for y in range(width):
@@ -70,6 +85,13 @@ def ft_blue(path: str) -> bytearray:
 
         width, height = image.size
 
+        string = "The shape of image is: "
+        items = image.getpixel((0, 0))
+        i = 0
+        for item in items:
+            i += 1
+        print(string, (height, width, i))
+
         for x in range(height):
             for y in range(width):
                 r, g, b = image.getpixel((y, x))
@@ -100,6 +122,13 @@ def ft_green(path: str) -> bytearray:
 
         width, height = image.size
 
+        string = "The shape of image is: "
+        items = image.getpixel((0, 0))
+        i = 0
+        for item in items:
+            i += 1
+        print(string, (height, width, i))
+
         for x in range(height):
             for y in range(width):
                 r, g, b = image.getpixel((y, x))
@@ -129,6 +158,13 @@ def ft_gray(path: str) -> bytearray:
         image = Image.open(input_image_path)
 
         width, height = image.size
+
+        string = "The shape of image is: "
+        items = image.getpixel((0, 0))
+        i = 0
+        for item in items:
+            i += 1
+        print(string, (height, width, i))
 
         """ Grayscale colors are those where the red, green, and blue
         components are all equal.

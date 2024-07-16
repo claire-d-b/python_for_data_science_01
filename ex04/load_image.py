@@ -18,6 +18,7 @@ def ft_load(path: str) -> bytearray:
         barray.extend([r, g, b])
 
         nbarray = barray[::-1]
+        # nbarray = barray
         """ Convert the flat list of RGB values to bytes """
         rgb_bytes = bytes(nbarray)
 

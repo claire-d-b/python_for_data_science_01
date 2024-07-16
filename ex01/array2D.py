@@ -7,6 +7,6 @@ def slice_me(family: list, start: int, end: int) -> list:
         nshape = (len(ret), len(ret[0]))
         print("My shape is: ", shape)
         print("My new shape is: ", nshape)
-        print(ret)
     except AssertionError as e:
         print(f"AssertionError: {e}")
+    return ret

@@ -57,8 +57,8 @@ def ft_load(path: str) -> bytearray:
         for x in range(nwidth):
             for y in range(nheight):
                 r, g, b = nimage.getpixel((x, y))
-                nbarray.extend([r, g, b])
-        nbarray.extend([r, g, b])
+                nbarray.extend([[r], [g], [b]])
+        nbarray.extend([[r], [g], [b]])
 
     except AssertionError as e:
         print(f"AssertionError: {e}")
@@ -68,4 +68,4 @@ def ft_load(path: str) -> bytearray:
 
     print(string, (nheight, nwidth, 1), " or ", (nheight, nwidth))
 
-    return nbarray
+    return [nbarray]

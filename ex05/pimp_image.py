@@ -7,6 +7,7 @@ def main():
     print(ft_blue("landscape.jpg"))
     print(ft_green("landscape.jpg"))
     print(ft_gray("landscape.jpg"))
+    print(ft_invert.__doc__)
 
 
 if __name__ == "__main__":
